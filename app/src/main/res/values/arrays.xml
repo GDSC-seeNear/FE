@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="relation">
+            <item>관계</item>
+            <item>부</item>
+            <item>모</item>
+            <item>형제</item>
+            <item>배우자</item>
+            <item>친구</item>
+            <item>지인</item>
+    </string-array>
+
+</resources>

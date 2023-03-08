@@ -4,16 +4,16 @@
     <item
         android:id="@+id/calenderFragment"
         android:title="홈"
-        android:icon="@drawable/ic_calendar"/>
+/>
 
     <item
         android:id="@+id/homeFragment"
         android:title="캘린더"
-        android:icon="@drawable/ic_home"/>
+/>
 
     <item
         android:id="@+id/myPageFragment"
         android:title="마이페이지"
-        android:icon="@drawable/ic_home"/>
+/>
 
 </menu>

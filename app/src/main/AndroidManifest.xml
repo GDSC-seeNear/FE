@@ -23,6 +23,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".UserChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminMainActivity"
+            android:exported="false" />
+        <activity
             android:name=".AdminActivity.RegisterActivity.RegisterActivity3"
             android:exported="false" />
         <activity
@@ -33,22 +39,27 @@
             android:exported="true"></activity>
         <activity
             android:name=".AdminActivity.RegisterActivity.RegisterActivity2"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".SplashActivity"
-            android:exported="true"></activity>
-        <activity
-            android:name=".AdminActivity.MapSearchActivity.MapActivity"
-            android:exported="true"></activity>
-        <activity
-            android:name=".UserActivity.userlogin.UserLoginActivity"
             android:exported="true" />
         <activity
-            android:name=".AdminActivity.AdminLoginActivity"
+            android:name=".AdminActivity.MapSearchActivity.MapActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UserActivity.userlogin.UserLoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AdminActivity.adminlogin.AdminLoginActivity"
             android:exported="false" />
         <activity
-            android:name=".AdminActivity.AdminSigninActivity"
+            android:name=".AdminActivity.adminsignup.AdminSigninActivity"
             android:exported="false" />
         <activity
             android:name=".UserActivity.usersignup.UserSignupActivity"
@@ -61,18 +72,10 @@
             android:exported="true" />
         <activity
             android:name=".UserActivity.sttActivity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true"></activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".UserActivity.usermain.UserMainActivity"
+            android:exported="true"></activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

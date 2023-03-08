@@ -6,11 +6,9 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.kgg.android.seenear.App
-import com.kgg.android.seenear.IntroActivity
-import com.kgg.android.seenear.MainActivity
-import com.kgg.android.seenear.R
+import com.kgg.android.seenear.UserActivity.usermain.UserMainActivity
+import com.kgg.android.seenear.UserActivity.usersignup.UserSignupActivity
 import com.kgg.android.seenear.databinding.ActivityUserLoginBinding
-import com.kgg.android.seenear.databinding.ActivityUserSignup2Binding
 import com.kgg.android.seenear.network.RetrofitInterface
 import com.kgg.android.seenear.network.data.loginRequest
 import com.kgg.android.seenear.network.data.loginResponse
@@ -22,7 +20,7 @@ class UserLoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityUserLoginBinding
     private val smsAuthApi by lazy {
-        RetrofitInterface.createForImport()
+        RetrofitInterface.RetrofitInstance.api
     }
 
     companion object{
@@ -33,6 +31,11 @@ class UserLoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityUserLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.signupText2.setOnClickListener {
+            val intent = Intent(this, UserSignupActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.sendBtn.setOnClickListener {
             if (binding.phoneEdittext.text.length == 11){ // 인증번호 전송 완료
@@ -118,7 +121,7 @@ class UserLoginActivity : AppCompatActivity() {
 
                     }
 
-                    val intent = Intent(this@UserLoginActivity, MainActivity::class.java)
+                    val intent = Intent(this@UserLoginActivity, UserMainActivity::class.java)
                     startActivity(intent)
 
                 } else { // code == 401

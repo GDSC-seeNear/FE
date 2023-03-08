@@ -5,9 +5,13 @@ plugins {
 
 android {
     compileSdk 32
-    
+
+    aaptOptions {
+        noCompress "tflite" // TensorFlow 라이브러리에 대한 정의
+    }
+
     buildFeatures {
-        viewBinding = true
+        viewBinding = true //
     }
 
     defaultConfig {
@@ -38,9 +42,10 @@ android {
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.room:room-compiler:2.5.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
@@ -58,9 +63,36 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
     implementation 'com.google.android.gms:play-services-location:17.0.0'
 
-//    parcelize
+    //    parcelize
 
     apply plugin: 'com.android.application'
     apply plugin: 'kotlin-android'
     apply plugin: 'kotlin-parcelize'
+
+
+
+    // text 전처리를 위한 NLTK(Natural Language Toolkit) 라이브러리
+    implementation 'com.nltk:nltk:3.5'
+
+    // transformers 라이브러리
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.20'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0'
+    implementation 'org.tensorflow:tensorflow-lite-support:0.1.0'
+    implementation 'com.google.android.gms:play-services-mlkit-text-recognition:16.2.0'
+    implementation 'com.google.mlkit:nl-detection:17.0.2'
+    implementation 'com.google.mlkit:translate:16.1.0'
+    implementation 'com.google.mlkit:image-labeling:17.0.0'
+    implementation 'com.google.mlkit:object-detection:16.2.1'
+    implementation 'com.google.mlkit:pose-detection:17.0.2'
+    implementation 'com.google.mlkit:face-detection:17.1.1'
+    implementation 'com.huggingface:transformers:4.10.0'
+
+    implementation 'org.tensorflow:tensorflow-lite:2.6.0'
+    implementation 'org.tensorflow:tensorflow-lite-task-nlp:2.6.0'
+
+    implementation 'org.tensorflow:tensorflow-lite-task-text:0.2.0'
+
+
+
+
 }

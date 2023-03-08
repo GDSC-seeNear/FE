@@ -17,20 +17,18 @@
         tools:context=".UserActivity.usersignup.UserSignupActivity">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/toolbar2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="start"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme">
 
-
             <ImageView
                 android:id="@+id/backBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                android:paddingTop="20dp"
                 app:srcCompat="@drawable/ic_icon_arrow_left" />
 
         </androidx.appcompat.widget.Toolbar>

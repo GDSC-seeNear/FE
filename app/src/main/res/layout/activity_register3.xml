@@ -17,20 +17,18 @@
         tools:context=".UserActivity.usersignup.UserSignupActivity">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/toolbar6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="start"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme">
 
-
             <ImageView
                 android:id="@+id/backBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                android:paddingTop="20dp"
                 app:srcCompat="@drawable/ic_icon_arrow_left" />
 
         </androidx.appcompat.widget.Toolbar>
@@ -50,22 +48,9 @@
                 android:id="@+id/disease_text3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="@string/registUser_detail"
                 android:textSize="20dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/skip_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginEnd="8dp"
-                android:background="#00FFFFFF"
-                android:gravity="center|right"
-                android:inputType="phone"
-                android:text="@string/skipBtn"
-                android:textColor="@color/theme_orange"
-                android:textSize="12dp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -83,39 +68,35 @@
                     android:textSize="16dp"
                     android:textStyle="bold" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/disease_input"
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고혈압" />
+
+                <CheckBox
+                    android:id="@+id/checkBox2"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@drawable/round_edittext">
+                    android:layout_height="wrap_content"
+                    android:text="당뇨병" />
 
-                    <Spinner
-                        android:id="@+id/disease_spinner"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="-38dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/disease_edittext"
-                        app:layout_constraintStart_toStartOf="@+id/disease_edittext"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <CheckBox
+                    android:id="@+id/checkBox3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="고지혈증" />
 
-                    <EditText
-                        android:id="@+id/disease_edittext"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="12dp"
-                        android:background="#00FFFFFF"
-                        android:hint="@string/disease_text"
-                        android:inputType="text"
-                        android:maxLength="10"
-                        android:textSize="14dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.0" />
+                <CheckBox
+                    android:id="@+id/checkBox4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="관절염" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                <CheckBox
+                    android:id="@+id/checkBox5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="요통, 좌골신경통" />
 
             </LinearLayout>
 
@@ -227,8 +208,33 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
+                <ImageView
+                    android:id="@+id/plusBtn3"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:foregroundGravity="right"
+                    app:srcCompat="@drawable/plus" />
+
             </LinearLayout>
 
+
+            <TextView
+                android:id="@+id/skip_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:background="#00FFFFFF"
+                android:gravity="center|right"
+                android:inputType="phone"
+                android:text="@string/skipBtn"
+                android:textColor="@color/theme_orange"
+                android:textSize="12dp"
+                android:textStyle="bold" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/registerBtn"

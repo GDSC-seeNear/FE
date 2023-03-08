@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity() {
 
                     response.body()?.let{
                         Log.d("request Id :", response.code().toString())
-                        binding.userName.text =it
                     }
                 } else { // code == 401
                     // 실패 처리

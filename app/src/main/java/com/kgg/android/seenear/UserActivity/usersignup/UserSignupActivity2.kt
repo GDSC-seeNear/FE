@@ -27,11 +27,8 @@ class UserSignupActivity2 : AppCompatActivity(){
     private lateinit var binding: ActivityUserSignup2Binding
     private var phoneNum: String ?= null
     private val smsAuthApi by lazy {
-        RetrofitInterface.createForImport()
+        RetrofitInterface.RetrofitInstance.api
     }
-
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

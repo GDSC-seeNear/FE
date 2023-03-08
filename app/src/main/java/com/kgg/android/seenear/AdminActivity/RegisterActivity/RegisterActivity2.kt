@@ -5,6 +5,8 @@ import android.app.Activity
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +19,8 @@ import java.util.*
 
 
 class RegisterActivity2 : AppCompatActivity() {
+
+    // Admin의 User 등록 - 2
 
     private lateinit var binding: ActivityRegister2Binding
     private lateinit var searchResult: SearchResultEntity
@@ -39,9 +43,24 @@ class RegisterActivity2 : AppCompatActivity() {
         binding.homeEdittext.setOnClickListener {
             val intent = Intent(this, SearchActivity::class.java)
             startActivityForResult(intent,REQUEST_CODE)
+
         }
 
         binding.homeEdittext.text = fullAddress
+
+        binding.plusBtnText.setOnClickListener {
+            Log.d("visibility check", (binding.familyLayout2.visibility == View.GONE).toString())
+            if (binding.familyLayout2.visibility == View.GONE)
+                binding.familyLayout2.visibility = View.VISIBLE
+            else if (binding.familyLayout3.visibility == View.GONE){
+                binding.familyLayout3.visibility = View.VISIBLE
+                binding.plusBtn1.visibility = View.GONE
+            }
+        }
+
+        // 유저 등록하기
+        binding.registerBtn.setOnClickListener {
+        }
 
 
     }

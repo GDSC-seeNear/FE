@@ -4,10 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.kgg.android.seenear.AdminActivity.AdminSigninActivity
+import com.kgg.android.seenear.AdminActivity.adminsignup.AdminSigninActivity
 import com.kgg.android.seenear.UserActivity.usersignup.UserSignupActivity
 import com.kgg.android.seenear.databinding.ActivityIntroBinding
-import com.kgg.android.seenear.UserActivity.sttActivity
 import com.kgg.android.seenear.UserActivity.userlogin.UserLoginActivity
 
 class IntroActivity : AppCompatActivity() {

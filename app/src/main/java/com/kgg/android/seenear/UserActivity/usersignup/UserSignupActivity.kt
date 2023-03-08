@@ -25,7 +25,7 @@ class UserSignupActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUserSignupBinding
 
     private val smsAuthApi by lazy {
-        RetrofitInterface.createForImport()
+        RetrofitInterface.RetrofitInstance.api
     }
 
     companion object{

@@ -1,4 +1,4 @@
-package com.kgg.android.seenear.AdminActivity
+package com.kgg.android.seenear.AdminActivity.adminlogin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
